@@ -12,4 +12,4 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: git diff --name-only origin/master
+      - run: git diff --name-only origin/main
