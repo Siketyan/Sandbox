@@ -23,6 +23,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: docker run --rm ghcr.io/siketyan/automan:latest
+      - run: docker run --rm -v "$(pwd):/src" -w /src ghcr.io/siketyan/automan:latest
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
