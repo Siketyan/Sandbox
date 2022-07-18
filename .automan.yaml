@@ -3,4 +3,9 @@ triggers:
   comment:
     - content: 'えいや'
 
+  description:
+    - content: '^- ?\[ \]'
+      regex: true
+      inverse: true
+
 comment: 'そいや！'
