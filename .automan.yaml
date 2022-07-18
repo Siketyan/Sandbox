@@ -9,3 +9,4 @@ triggers:
       inverse: true
 
 comment: 'そいや！'
+default: reject
