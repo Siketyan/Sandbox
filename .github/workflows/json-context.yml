@@ -2,7 +2,8 @@ name: Access github context via JSON
 
 on:
   issue_comment:
-    - created
+    types:
+      - created
 
 jobs:
   test:
