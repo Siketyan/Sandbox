@@ -2,3 +2,5 @@
 triggers:
   comment:
     - content: 'えいや'
+
+comment: 'そいや！'
