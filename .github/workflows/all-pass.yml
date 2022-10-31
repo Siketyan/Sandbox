@@ -1,0 +1,21 @@
+name: all-pass
+
+on:
+  check_suite:
+    types:
+      - completed
+
+jobs:
+  check-all-pass:
+    runs-on: ubuntu-latest
+    steps:
+      - run: actions/checkout@v3
+      - name: Check all runs are passed
+        run: |
+          RUNS="$(gh pr checks)"
+          if $? -eq 0; then
+            ALL_COUNT="$(cat RUNS | wc -l)"
+            PASS_COUNT="$(cat RUNS | grep 'pass' | wc -l)"
+            test $ALL_COUNT -eq $PASS_COUNT
+          fi
+
